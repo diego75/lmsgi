@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<!ELEMENT listado (datos+)>
+<!ELEMENT datos (nombre,dirección?,(móvil|email)*)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT dirección (#PCDATA)>
+<!ELEMENT móvil (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+
+<!ENTITY ma "Miguel Ángel Ibáñez">
+

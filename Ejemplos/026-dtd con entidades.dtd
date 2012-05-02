@@ -1,0 +1,44 @@
+<!-- entidades internas simples, no necesitan % -->
+<!ENTITY derechos 'Copyright (c) 2010'>
+
+<!-- entidades externas: su contenido reside en otra parte, no en el propio documento, se indica con URI -->
+<!ENTITY % MiEntidadSystem SYSTEM 'http://www.iescierva.net/intro.xml'>  <!-- accesible solo desde el sistema -->
+
+<!-- entidades paramétricas analizadas, necesitan % , permiten agrupar datos dentro de la DTD para poder
+     escribirlos luego de manera abreviada -->
+<!ENTITY % tallas_comunes "talla (XS|S|M|L|XL) 'M'
+	color (rojo|azul|verde|negro|blanco) 'blanco'
+	precio CDATA #REQUIRED" >
+	
+
+<!ENTITY % std      "standard SGML">
+<!ENTITY % firma	" &#x2014; &autor;.">
+<!ENTITY % pregunta "Por que no puedo publicar directamente mis libros en %std;?">
+<!ENTITY % autor    "William Shakespeare">
+
+
+	
+<!ENTITY % fuentes_estilos '(TT | I | B | BIG | SMALL | NORMAL) "NORMAL"'>
+
+<!ENTITY % en_linea '(#PCDATA | %fuentes_estilos; )+'>	
+	
+<!-- ejemplo de aplicación -->
+<!ELEMENT calcetines (#PCDATA)>
+	<!ATTLIST calcetín 
+		%tallas_comunes;>
+
+<!ELEMENT panty (#PCDATA)>
+	<!ATTLIST panty 
+		%tallas_comunes;>
+
+<!ELEMENT medias (#PCDATA)>
+	<!ATTLIST medias 
+		%tallas_comunes;>
+
+<!ELEMENT texto EMPTY>
+	<!ATTLIST texto
+		fuente (TT | I | B | BIG | SMALL | NORMAL) "NORMAL"
+	>
+	
+
+		

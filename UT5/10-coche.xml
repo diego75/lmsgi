@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no' ?>
+
+<car
+xmlns='http://www.iescierva.net'
+xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+xsi:schemaLocation='http://www.iescierva.net xsd/10-coche.xsd'>Audi</car> 
+

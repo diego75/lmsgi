@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<xs:schema xmlns:xs='http://www.w3.org/2001/XMLSchema'
+	targetNamespace='mi-espacio'
+	xmlns='mi-espacio'
+	elementFormDefault='qualified'>
+	
+<!-- Elementos con contenido Simple (son simpleContent), y opcionalmente atributos -->
+
+	<xs:element name='teclado'>
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base='xs:string'>
+					<xs:attribute name='teclas' type='tTeclas' />
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:simpleType name='tTeclas'>
+		<xs:restriction base='xs:integer'>
+			<xs:maxExclusive value='110' />
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

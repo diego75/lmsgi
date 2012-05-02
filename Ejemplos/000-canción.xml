@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+
+<!-- Fichero: canción.xml -->
+
+<cancion length='6:20' title='Hot Cop'>
+  <autor>Jacques Morali</autor>
+  <autor>Henri Belolo</autor>
+  <autor>Victor Willis</autor>
+  <productor>Jacques Morali</productor>
+  <editor>PolyGram Records</editor>
+  <anio>1978</anio>
+  <artista>Village People</artista>
+</cancion>

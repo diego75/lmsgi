@@ -1,0 +1,23 @@
+<![INCLUDE[
+<!ELEMENT nombre (#PCDATA)>
+]]>
+
+<![IGNORE[
+<!ELEMENT mensaje (#PCDATA)>
+]]>
+
+<!ENTITY % rechazar 'IGNORE'>
+<!ENTITY % aceptar 'INCLUDE'>
+
+<![ %rechazar; [
+	<!ELEMENT mensaje (aprobado,razón,firma)>
+]]>
+
+<![ %aceptar; [
+	<!ELEMENT mensaje (aprobado,firma)>
+]]>
+
+<!ELEMENT aprobado EMPTY>
+	<!ATTLIST aprobado estado (verdadero|falso) 'falso'>
+<!ELEMENT razón (#PCDATA)>
+<!ELEMENT firma (#PCDATA)>

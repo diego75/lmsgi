@@ -1,0 +1,6 @@
+<!ELEMENT Atlas (Pais*)>
+<!ELEMENT Pais (Nombre,Capital,Población,Extensión)>
+<!ELEMENT Nombre (#PCDATA)>
+<!ELEMENT Capital (#PCDATA)>
+<!ELEMENT Población (#PCDATA)>
+<!ELEMENT Extensión (#PCDATA)>

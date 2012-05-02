@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+
+<empleado
+	xmlns="mi-espacio"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="mi-espacio 060-elementosimple.xsd" >
+	
+	<apellidos>Lopez</apellidos>
+	<edad>36</edad>
+	<fechaNacimiento>1970-03-27</fechaNacimiento>
+
+</empleado>

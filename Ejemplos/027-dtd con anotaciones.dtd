@@ -1,0 +1,15 @@
+<!-- notation en entidades -->
+<!NOTATION gif SYSTEM 'gif'>
+<!NOTATION jpeg SYSTEM 'jpeg'>
+<!NOTATION HTML SYSTEM 'http://www.w3.org/Markup'>
+<!NOTATION HTML PUBLIC '-//W3C//DTD HTML 4.01 Transitional//EN'>
+
+<!-- notation en atributos -->
+<!ATTLIST fecha NOTATION (ISO-DATE | EUROPEAN-DATE ) #REQUIRED>
+<!ATTLIST imagen
+	fuente CDATA #REQUIRED
+	tipo NOTATION (gif) #REQUIRED >
+	
+<!ENTITY logo-gif SYSTEM 'imágenes/logo.gif' NDATA gif>
+<!ENTITY logo-jpeg SYSTEM 'imágenes/logo.jpeg' NDATA jpeg>
+	

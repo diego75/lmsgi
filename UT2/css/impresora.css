@@ -1,0 +1,24 @@
+/* Nombre: impresora.css
+   Fecha: 26-10-2011
+*/ 
+
+/* estilos principales */ 
+body {
+	color: black;
+	font-family: "Palatino", serif;
+	font-size: 13pt;  
+}
+
+/* efectos básicos */
+.o {
+	font-style: oblique;
+}
+.i {
+	font-style: italic;
+}
+
+p { 
+  line-height: 1.5em; 
+}
+
+

@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+
+<!DOCTYPE listado SYSTEM "023-datos personales.dtd">
+<listado>
+  <datos>
+    <nombre>Juanito</nombre>
+    <dirección>Mi casa</dirección>
+    <email>juanito@gmail.com</email>
+    <email>juanito.privado@yahoo.com</email>
+    <móvil>666111777</móvil>
+    <email>pruebas@gmail.com</email>
+  </datos>
+  <datos>
+    <nombre>Lola</nombre>
+    <dirección>Plaza Mayor</dirección>
+  </datos>
+  <datos>
+    <nombre>&ma;</nombre>
+  </datos>
+</listado>

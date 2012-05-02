@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mensajes SYSTEM "024-dtd con atributos.dtd">
+
+<!-- ejemplo de mensaje -->
+
+<mensajes>
+
+<mensaje fecha="2011-02-23">
+  <de>Josefa Gómez &lt;jgomez@yahoo.es&gt; </de>
+  <a>Juan Martínez &lt;jmartinez@gmail.com&gt; </a>
+  <texto idioma="es">Hola, que tal...</texto>
+</mensaje>
+
+<mensaje fecha="2011-02-23" prioridad='urgente' resumen='saludo' codpostal='46110' >
+  <de>Juan Martínez &lt;jmartinez@gmail.com&gt; </de>
+  <a>Josefa Gómez &lt;jgomez@yahoo.es&gt; </a>
+  <texto idioma="es">Bien, ¿y tú?</texto>
+</mensaje>
+
+</mensajes>

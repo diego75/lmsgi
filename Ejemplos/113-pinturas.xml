@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+
+<pintura
+  xmlns='mi-espacio'
+  xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+  xsi:schemaLocation='mi-espacio 113-pinturas.xsd' >
+
+  <nombre>El grito</nombre>
+  <autor>Edvard Munch</autor>
+  <fecha>1893</fecha>
+  <museo>Galería Nacional de Oslo</museo>
+</pintura>

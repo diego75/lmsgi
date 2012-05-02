@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+
+<!-- ejemplo de elemento con contenido solo texto. Prueba a validar con teclas>=110, y los dos xsd -->
+
+<teclado teclas='100'
+  xmlns='mi-espacio'
+  xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+  xsi:schemaLocation='mi-espacio 120-elementosSoloTexto-2.xsd' >
+
+  este teclado es muy muy malo.
+  
+</teclado>

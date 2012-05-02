@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<direccion>
+	<nombre>
+		<titulo>Mrs.</titulo>
+		<nombre>Mary</nombre>
+		<apellidos>McGoon</apellidos>
+	</nombre>
+	<calle>1401 Main Street</calle>
+	<ciudad estado="NC">Anytown</ciudad>
+	<codigo-postal>34829</codigo-postal>
+	<pais/>
+</direccion>

@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+
+<clientes>
+
+  <cliente código='10'>
+    <apellidos>García Pérez</apellidos>
+    <nombre>Luisa</nombre>
+    <factura número='27'></factura>
+    <factura número='215'></factura>
+    <factura número='411'></factura>
+  </cliente>
+  <cliente código='20'>
+    <apellidos>López Bermúdez</apellidos>
+    <nombre>Jacinto</nombre>
+  </cliente>
+  <cliente código='30'>
+    <apellidos>González Martínez</apellidos>
+    <nombre>Hermenegilda</nombre>
+  </cliente>
+
+</clientes>

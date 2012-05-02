@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+
+<empleado
+	xmlns="mi-espacio"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="mi-espacio 057-empleados.xsd" >
+	
+	<nombre>Daniel</nombre>
+	<apellidos>Fernández</apellidos>
+	<edad>23</edad>
+	<email>dfernandez@gmail.com</email>
+
+</empleado>

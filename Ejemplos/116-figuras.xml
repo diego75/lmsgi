@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+
+<registro-figuras
+  xmlns='mi-espacio'
+  xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+  xsi:schemaLocation='mi-espacio 116-figuras.xsd' >
+
+<cuadrado>
+	<nombre>cuadrado rojo</nombre>
+	<superficie>150 cm2</superficie>
+</cuadrado>
+
+<círculo>
+	<nombre>círculo verde</nombre>
+	<superficie>43 cm2</superficie>
+	<radio>12.9</radio>
+	<longitud>11.45</longitud>
+</círculo>
+
+</registro-figuras>

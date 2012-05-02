@@ -1,0 +1,47 @@
+<?xml version='1.1' encoding='utf-8' ?>
+
+    <discografía_tool>
+        <lp identificador='01'>  <!-- Atributo -->
+            <título>Opiate</título>
+            <año>1992</año>
+            <fecha> <!-- fecha NO puede ser atributo -->
+            	<dia>23</dia>
+            	<mes>11</mes>
+            	<año>1999</año>
+            </fecha>
+            <discográfica>Zoo/BMG/Volcano</discográfica>
+            <temas>
+                <tema>Sweat</tema> <!-- tema NO puede ser atributo -->
+                <tema>Mi carro</tema>
+            </temas>
+        </lp>
+        <lp fecha_dia='23' fecha_mes='11' fecha_año='1999'>
+        	<identificador>02</identificador> <!-- Elemento -->
+            <título>Undertow</título>
+            <año>1993</año>
+            <discográfica>Zoo/BMG/Volcano</discográfica>
+            <temas>
+                <tema>Intolerance</tema>
+            </temas>
+        </lp>
+        <lp fecha='23-11-1999'>
+        </lp>
+        <c.c.c. cancelada='cancelada'>  <!-- cuenta bancaria, con sub-elementos -->
+        	<entidad>1234</entidad>
+        	<oficina>2378</oficina>
+        	<dc>23</dc>
+        	<cuenta>1288829178</cuenta>
+        </c.c.c.>
+        <ccc entidad='1234' oficina='2378' dc='23'
+        	 cuenta='1288829178' />
+        <ccc entidad='1234' oficina='2378' dc='23'>
+        1288829178</ccc>   <!-- SEMÁNTICA INCORRECTA -->
+        <nif>
+        	<número>72772882</número>
+        	<letra>X</letra>
+        </nif>
+        <nif número='72772882' letra='X' />
+        <nif número='72772882X' />   <!-- SEMÁNTICA INCORRECTA -->
+        <nif valor='72772882X' />
+        <nif>72772882X</nif>
+    </discografía_tool>

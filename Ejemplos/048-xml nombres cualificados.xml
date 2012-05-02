@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+
+<texto:directorio
+	xmlns:texto='urn:martin:textoInfo'
+	xmlns:imagen='urn:martin:imagenInfo'>
+	<texto:fichero nombrefichero='libro.xml'>
+		<texto:descripción>
+			Una lista de libros
+		</texto:descripción>
+	</texto:fichero>
+	<imagen:fichero nombrefichero='gracioso.jpg'>
+		<imagen:descripción>
+			Un dibujo gracioso
+		</imagen:descripción>
+		<imagen:tamaño ancho='200' largo='100' />			
+	</imagen:fichero>
+</texto:directorio>

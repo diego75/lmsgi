@@ -1,0 +1,12 @@
+<?xml version='1.1' encoding='utf-8' standalone='yes' ?>
+
+<!-- Definición de entidades personalizadas EN LA DTD 
+<!ENTITY yo "Miguel Ángel Ibáñez">
+<!ENTITY tú "Perico Gómez">
+ -->
+ 
+<raíz>
+	<nombre>yo</nombre>
+	<nombre>yo</nombre>
+	<nombre>tú y yo</nombre>
+</raíz>

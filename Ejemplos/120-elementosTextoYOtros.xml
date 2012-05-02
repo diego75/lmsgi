@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+
+<!-- ejemplo de elemento con contenido solo texto. Prueba a validar con teclas>=110, y los dos xsd -->
+
+<carta
+  xmlns='mi-espacio'
+  xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+  xsi:schemaLocation='mi-espacio 122-elementosTextoYOtros.xsd' >
+
+  Estimado Sr. <destino>Gómez</destino>:
+  
+  Desde la empresa <origen>XML</origen> le deseamos una felíz Navidad.
+  
+</carta>

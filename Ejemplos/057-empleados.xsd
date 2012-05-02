@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="mi-espacio"
+        xmlns="mi-espacio"
+        elementFormDefault="qualified">
+
+	<xs:element name="empleado">
+        <xs:complexType>
+			<xs:sequence>
+				<xs:element name="nombre" type="xs:string"/>
+				<xs:element name="apellidos" type="xs:string"/>
+				<xs:element name="edad" type="xs:integer"/>
+				<xs:element name="email" type="xs:string"/>
+				<xs:element name="casado" type="xs:boolean" default="1"/>
+				<xs:element name="pi" type="xs:float" fixed="3.1415926535"/>
+				<xs:element name="mascota" type="xs:string" default=""/>
+				<xs:element name="fnacimiento" type="xs:date" />
+				<xs:element name="fvacaciones" type="xs:date" default="2011-07-01"/>
+				<xs:element name="horaentrada" type="xs:time" default="08:15:00" />
+				<xs:element name="cita" type="xs:dateTime" fixed="2011-03-09T12:30:00"/>
+			</xs:sequence>			
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

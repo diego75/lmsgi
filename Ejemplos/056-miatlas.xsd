@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+        elementFormDefault="qualified">
+
+<xs:element name="Atlas">
+    <xs:complexType>
+		<xs:sequence>
+			<xs:element ref="Pais" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="Pais">
+	
+        <xs:complexType>
+		<xs:sequence>
+			<xs:element ref="Nombre"/>
+			<xs:element ref="Capital"/>
+			<xs:element ref="Población"/>
+			<xs:element ref="Extensión"/>		
+		</xs:sequence>
+	</xs:complexType>
+    </xs:element>
+
+<xs:element name="Nombre" type="xs:string" />
+
+<xs:element name="Capital" type="xs:string" />
+
+<xs:element name="Población" type="xs:string" />
+
+<xs:element name="Extensión" type="xs:string" />
+
+</xs:schema>

@@ -1,0 +1,23 @@
+/* Nombre: pantalla.css
+   Fecha: 26-10-2011
+*/ 
+
+/* estilos principales */ 
+body { 
+	font-family: 'Univers', sans-serif;
+	font-size: 150%; 
+}
+
+div {
+	margin-left: auto;
+	margin-right: auto;
+	border: black 3px solid;
+	width: 40%;
+}
+
+tr.fondo_resaltado,
+col.fondo_resaltado,
+colgroup.fondo_resaltado,
+table.fondo_resaltado {
+    background-color: rgb(45,230,23);	
+}

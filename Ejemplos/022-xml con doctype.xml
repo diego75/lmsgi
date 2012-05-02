@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+
+<!-- declaración de DTD interna -->
+
+<!DOCTYPE receta [
+
+<!ELEMENT receta (plato,ingredientes,preparación)>
+<!ELEMENT plato (#PCDATA)>
+<!ELEMENT ingredientes (#PCDATA)>
+<!ELEMENT preparación (#PCDATA)>
+
+]>
+
+<receta>
+  <plato>Lentejas con chorizo</plato>
+  <ingredientes>lentejas, chorizo</ingredientes>
+    <preparación>
+	10 poner lentejas en remojo la noche anterior
+    20 sofreir el chorizo
+    30 comérselo todo
+  </preparación>
+</receta>

@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="mi-espacio"
+        xmlns="mi-espacio"
+        elementFormDefault="qualified">
+
+<xs:element name="Librería">
+        <xs:complexType>
+		<xs:sequence>
+			<xs:element ref="Libro" minOccurs="1" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+    </xs:element>
+
+<xs:element name="Libro">
+        <xs:complexType>
+		<xs:sequence>
+			<xs:element ref="Título" minOccurs="1" maxOccurs="1" />
+			<xs:element ref="Autor" minOccurs="1" maxOccurs="1" />
+			<xs:element ref="Fecha" minOccurs="1" maxOccurs="1" />
+			<xs:element ref="ISBN" minOccurs="1" maxOccurs="1" />
+			<xs:element ref="Editorial" minOccurs="1" maxOccurs="1" />		
+		</xs:sequence>
+	</xs:complexType>
+    </xs:element>
+
+<xs:element name="Título" type="xs:string" />
+
+<xs:element name="Autor" type="xs:string" />
+
+<xs:element name="Fecha" type="xs:string" />
+
+<xs:element name="ISBN" type="xs:string" />
+
+<xs:element name="Editorial" type="xs:string" />
+
+</xs:schema>

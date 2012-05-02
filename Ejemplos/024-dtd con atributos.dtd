@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<!-- DTD mensaje -->
+
+<!ELEMENT texto (#PCDATA)>
+	<!ATTLIST texto idioma CDATA #REQUIRED>
+
+<!ELEMENT de (#PCDATA)>
+
+<!ELEMENT a (#PCDATA)>
+
+<!ELEMENT mensaje (de,a,texto) >
+	<!ATTLIST mensaje 
+		prioridad (normal|urgente|baja) 'normal'
+		fecha CDATA #REQUIRED 
+		codpostal CDATA #FIXED '46110'
+		resumen CDATA #IMPLIED >
+
+<!ELEMENT mensajes ( (mensaje)* ) >
+
+<!ELEMENT empleado (#PCDATA)>
+	<!ATTLIST empleado
+		dni ID #REQUIRED >
+
+<!ELEMENT pais (#PCDATA)>
+	<!ATTLIST pais
+	   población NMTOKEN #REQUIRED >
+	
+<!ELEMENT teléfono (#PCDATA)>
+	<!ATTLIST teléfono
+	   lugar (oficina|móvil|particular) 'oficina'>
+			
+<!ELEMENT factura EMPTY>
+	<!ATTLIST factura
+		fecha CDATA #REQUIRED
+		dni IDREF #REQUIRED >

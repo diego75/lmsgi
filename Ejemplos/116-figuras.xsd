@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<xs:schema xmlns:xs='http://www.w3.org/2001/XMLSchema'
+	targetNamespace='mi-espacio'
+	xmlns='mi-espacio'
+	elementFormDefault='qualified'>
+	
+<!-- ejemplo con extensiones -->
+
+	<xs:element name='registro-figuras'>
+		<xs:complexType>
+			<xs:sequence>   <!--el orden es obligatorio -->
+				<xs:element name='cuadrado' type='figura' />
+				<xs:element name='círculo' type='figuraExtendida' />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+  <xs:complexType name='figura'>
+  	<xs:sequence>
+  	  <xs:element name='nombre' type='xs:string' />
+  	  <xs:element name='superficie' type='xs:string' />
+  	</xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name='figuraExtendida'>
+	<xs:complexContent>
+  		<xs:extension base='figura'>
+  			<xs:sequence>
+  				<xs:element name='radio' type='xs:double' />
+  				<xs:element name='longitud' type='xs:double' /> 						
+	  		</xs:sequence>
+  		</xs:extension>
+  	</xs:complexContent>
+  </xs:complexType>
+  
+</xs:schema>
