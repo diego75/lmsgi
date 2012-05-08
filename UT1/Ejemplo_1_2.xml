@@ -7,7 +7,7 @@
 		<apellidos>McGoon</apellidos>
 	</nombre>
 	<calle>1401 Main Street</calle>
-	<ciudad estado="NC">Anytown</ciudad>
-	<codigo-postal>34829</codigo-postal>
+	<ciudad estado='NC'>Anytown</ciudad>
+	<codigo-postal>34888</codigo-postal>
 	<pais/>
 </direccion>
