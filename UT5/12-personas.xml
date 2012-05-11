@@ -5,20 +5,14 @@ xmlns='http://www.iescierva.net'
 xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
 xsi:schemaLocation='http://www.iescierva.net xsd/12-personas.xsd'>
 
-<persona>
-		<nombre>Pepe</nombre>
-		<apellidos>Gómez Martínez</apellidos>
-		<fnac>2012-01-23</fnac>
+<persona nombre='Pepe' apellidos='Gómez Martínez' fnac='2012-01-23'>
 		<email>pepe@gmail.com</email>
 </persona>
 
-<persona>
-		<nombre>Mariconchi</nombre>
-		<apellidos>Ruíz de la Borbolla</apellidos>
-		<fnac>2000-01-13</fnac>
-		<teléfono>0034-968-433-1111</teléfono>
+<persona nombre='Mariconchi' apellidos='Ruíz de la Borbolla' fnac='2000-01-13'>
 		<email>mariconchi@hotmail.com</email>
 		<email>mariconchi@gmail.com</email>
+		<teléfono>0034-968-433-1111</teléfono> 
 </persona>
 
-</personas> 
+</personas>

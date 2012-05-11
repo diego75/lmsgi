@@ -10,33 +10,15 @@ xmlns='http://www.iescierva.net' elementFormDefault='qualified'>
 
 <xs:element name='persona'  minOccurs='1' maxOccurs='unbounded'>
   <xs:complexType>
-    <xs:sequence>
-      <xs:attribute name='nombre' type='nombre' />
-      <xs:element name='apellidos'>
-          <xs:simpleType>
-    		<xs:restriction base='xs:string'>
-      			<xs:pattern value='[a-zA-ZáéíóúÁÉÍÓÚüÜçÇ -]{1,30}'/>
-    		</xs:restriction>
-          </xs:simpleType>
-      </xs:element>
-      <xs:element name='fnac' type='xs:date' />
+      <xs:sequence>
       <xs:choice minOccurs='0' maxOccurs='10'>
-	      <xs:element name='email'>
-          	<xs:simpleType>
-    			<xs:restriction base='xs:string'>
-      				<xs:pattern value='[a-zA-Z_.-][a-zA-Z0-9_.-]*@[a-zA-Z0-9_.-]+'/>
-    			</xs:restriction>
-	          </xs:simpleType>
-    	  </xs:element>
-      	  <xs:element name='teléfono'>
-          	<xs:simpleType>
-    			<xs:restriction base='xs:string'>
-      				<xs:pattern value='[+0-9 _.-]{3,20}'/>
-    			</xs:restriction>
-          	</xs:simpleType>
-      	  </xs:element>
+        <xs:element name='email' type='email' />
+    	<xs:element name='teléfono' type="teléfono" />
       </xs:choice>
     </xs:sequence>
+    <xs:attribute name='nombre' type='nombre-apellido' />
+    <xs:attribute name='apellidos' type='nombre-apellido' />
+    <xs:attribute name='fnac' type='xs:date' />
   </xs:complexType>
 </xs:element>
 
@@ -44,10 +26,22 @@ xmlns='http://www.iescierva.net' elementFormDefault='qualified'>
   </xs:complexType>
 </xs:element>
 
+<!-- Definiciones de tipos personalizados -->
+<xs:simpleType name='email'>
+    <xs:restriction base='xs:string'>
+    	<xs:pattern value='[a-zA-Z_.-][a-zA-Z0-9_.-]*@[a-zA-Z0-9_.-]+'/>
+    </xs:restriction>
+</xs:simpleType>
 
-<xs:simpleType name='nombre'>
+<xs:simpleType name='teléfono'>
   <xs:restriction base='xs:string'>
-    <xs:pattern value='[a-zA-ZáéíóúÁÉÍÓÚüÜçÇ ]{1,20}'/>
+    <xs:pattern value='[+0-9 _.-]{3,20}'/>
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name='nombre-apellido'>
+  <xs:restriction base='xs:string'>
+    <xs:pattern value='[a-zA-ZáéíóúÁÉÍÓÚüÜçÇ -]{1,20}'/>
   </xs:restriction>
 </xs:simpleType>
 
