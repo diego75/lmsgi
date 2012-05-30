@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='utf-8'?> 
+
+
+<!ELEMENT ordenadores (ordenador+)>
+
+
+<!ELEMENT ordenador (hardware*, software*)>
+<!ATTLIST ordenador
+	tipo (sobremesa|portatil) "sobremesa"
+>
+<!ELEMENT hardware (placa_base,cpu,pci,memoria_ram,unidad_cd)>
+<!ELEMENT placa_base  (#PCDATA)>
+<!ATTLIST placa_base  
+	marca CDATA #REQUIRED
+	modelo CDATA #REQUIRED
+	cpu CDATA #REQUIRED
+	chipset CDATA #REQUIRED
+>
+
+
+<!ELEMENT cpu  (#PCDATA)>
+<!ATTLIST cpu  
+	marca CDATA #REQUIRED
+	modelo CDATA #REQUIRED
+	frecuencia CDATA #REQUIRED
+	número_nucleos CDATA #REQUIRED
+>
+<!ELEMENT pci (tarjeta_grafica,tarjeta_red,tarjeta_sonido)>
+
+<!ELEMENT tarjeta_grafica (#PCDATA)>
+<!ATTLIST tarjeta_grafica 
+	marca CDATA #REQUIRED
+	modelo CDATA #REQUIRED
+>
+
+<!ELEMENT tarjeta_red (#PCDATA)>
+<!ATTLIST tarjeta_red 
+	marca CDATA #REQUIRED
+	modelo CDATA #REQUIRED
+>
+
+<!ELEMENT tarjeta_sonido  (#PCDATA)>
+<!ATTLIST tarjeta_sonido 
+	marca CDATA #REQUIRED
+	modelo CDATA #REQUIRED
+>
+<!ELEMENT memoria_ram  (#PCDATA)>
+<!ATTLIST memoria_ram
+	marca CDATA #REQUIRED
+	modelo CDATA #REQUIRED
+	numero_ranuras CDATA #REQUIRED
+	tipo CDATA #REQUIRED
+	tamaño_modulos CDATA #REQUIRED
+>
+
+<!ELEMENT unidad_cd  (#PCDATA)>
+<!ATTLIST unidad_cd
+	marca CDATA #REQUIRED
+	modelo CDATA #REQUIRED
+	numero CDATA #REQUIRED
+	velocidad CDATA #REQUIRED
+>
+
+<!ELEMENT software (BIOS,sistema_operativo)>
+<!ELEMENT BIOS  (#PCDATA)>
+<!ELEMENT sistema_operativo (#PCDATA)>
+
+
+

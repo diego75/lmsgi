@@ -1,0 +1,149 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<xs:schema xmlns:xs='http://www.w3.org/2001/XMLSchema'
+targetNamespace='http://www.iescierva.net'
+xmlns='http://www.iescierva.net' elementFormDefault='qualified'>
+
+
+<xs:element name='ordenadores'>
+  <xs:complexType>
+    <xs:sequence>
+		<xs:element name='ordenador' minOccurs='1' maxOccurs='unbounded'>
+  			<xs:complexType>
+      			<xs:sequence>
+      				<xs:choice minOccurs='0' maxOccurs='10'>
+        				<xs:element name='hardware' type='definición' />
+     					<xs:element name='software' type='definición' />
+      				</xs:choice>
+    			</xs:sequence>
+    			<xs:attribute name='tipo' type='definición' />
+  			</xs:complexType>
+  		</xs:element>	
+			<xs:element name='hardware' minOccurs='1' maxOccurs='unbounded'>
+  				<xs:complexType>
+      				<xs:sequence>
+      					<xs:choice minOccurs='0' maxOccurs='10'>
+        					<xs:element name='placa_base' type='definición' />
+     						<xs:element name='cpu' type='definición'/>
+     						<xs:element name='memoria_ram' type='definición' />
+     						<xs:element name='pci' type='definición' />
+     						<xs:element name='unidad_cd' type='definición' />
+      					</xs:choice>
+    				</xs:sequence>
+  				</xs:complexType>
+			</xs:element>
+
+			
+					<xs:element name='placa_base' minOccurs='1' maxOccurs='unbounded'>
+  						<xs:complexType>
+      						<xs:sequence>
+      							<xs:choice minOccurs='0' maxOccurs='10' />
+      						</xs:sequence>
+    						<xs:attribute name='marca' type='definición' />
+    						<xs:attribute name='modelo' type='definición' />
+    						<xs:attribute name='cpu' type='definición' />
+    						<xs:attribute name='chipset' type='definición' />
+  						</xs:complexType>
+					</xs:element>
+
+					<xs:element name='cpu' minOccurs='1' maxOccurs='unbounded'>
+  						<xs:complexType>
+      						<xs:sequence>
+      							<xs:choice minOccurs='0' maxOccurs='10' />
+    						</xs:sequence>
+    						<xs:attribute name='marca' type='definición' />
+    						<xs:attribute name='modelo' type='definición' />
+   							<xs:attribute name='frecuencia' type='definición' />
+    						<xs:attribute name='número_nucleos' type='definición' />
+  						</xs:complexType>
+					</xs:element>
+
+					<xs:element name='pci' minOccurs='1' maxOccurs='unbounded'>
+  						<xs:complexType>
+      						<xs:sequence>
+      							<xs:choice minOccurs='0' maxOccurs='10'>
+       								<xs:element name='tarjeta_grafica' type='definición' />
+									<xs:element name='tarjeta_red' type='definición' />
+     								<xs:element name='tarjeta_sonido' type='definición' />
+    							</xs:choice>
+    						</xs:sequence>
+    						<xs:attribute name='marca' type='definición' />
+    						<xs:attribute name='modelo' type='definición' />
+ 							</xs:complexType>
+					</xs:element>
+
+
+
+					<xs:element name='memoria_ram' minOccurs='1' maxOccurs='unbounded'>
+  						<xs:complexType>
+     						<xs:sequence>
+      							<xs:choice minOccurs='0' maxOccurs='10' />
+      						</xs:sequence>
+   							 <xs:attribute name='marca' type='definición' />
+   							 <xs:attribute name='modelo' type='definición' />
+  							 <xs:attribute name='numero_ranuras' type='definición' />
+  							 <xs:attribute name='tipo' type='definición' />
+  							 <xs:attribute name='tamaño_modulos' type='definición' />
+  						</xs:complexType>
+					</xs:element>
+
+					<xs:element name='unidad_cd' minOccurs='1' maxOccurs='unbounded'>
+  						<xs:complexType>
+      						<xs:sequence>
+      							<xs:choice minOccurs='0' maxOccurs='10' />
+    						</xs:sequence>
+    					<xs:attribute name='marca' type='definición' />
+   						<xs:attribute name='modelo' type='definición' />
+    					<xs:attribute name='numero' type='definición' />
+    					<xs:attribute name='velocidad' type='definición' />
+  						</xs:complexType>
+					</xs:element>
+
+
+
+					<xs:element name='software' minOccurs='1' maxOccurs='unbounded'>
+  						<xs:complexType>
+      						<xs:sequence>
+      							<xs:choice minOccurs='0' maxOccurs='10'>
+        							<xs:element name='BIOS' type='definición' />
+     								<xs:element name='sistema_operativo' type='definición' />
+      							</xs:choice>
+   							 </xs:sequence>
+  						</xs:complexType>
+					</xs:element>
+
+			</xs:sequence>
+  	</xs:complexType>
+</xs:element>
+
+    
+
+<!-- Definiciones de tipos personalizados -->
+
+
+<xs:simpleType name='email'>
+    <xs:restriction base='xs:string'>
+     <xs:pattern value='[a-zA-Z_.-][a-zA-Z0-9_.-]*@[a-zA-Z0-9_.-]+'/>
+    </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name='teléfono'>
+  <xs:restriction base='xs:string'>
+    <xs:pattern value='[+0-9 _.-]{3,20}'/>
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name='definición'>
+  <xs:restriction base='xs:string'>
+    <xs:pattern value='[a-zA-ZáéíóúÁÉÍÓÚüÜçÇ0-9 -]{1,20}'/>
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name='fecha'>
+  <xs:restriction base='xs:date'>
+    <xs:pattern value='[0-9]{1,4}-[0-9]{1,2}-[0-9]{1,2}'/>    		
+  </xs:restriction>
+</xs:simpleType> 
+
+
+</xs:schema>

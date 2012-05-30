@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8' standalone='no'?>
+
+<ordenadores
+xmlns='http://www.iescierva.net'
+xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+xsi:schemaLocation='xsd/xsd-ordenadores.xsd'>
+
+
+	<ordenador tipo='sobremesa'>
+		<hardware>
+			<placa_base marca='ASUS' modelo='P5G41T-M LE' cpu='Procesadores Intel Socket 775' chipset='	G41 / ICH7' />
+			<cpu marca='Intel' modelo='Celeron E3400 ' frecuencia='2,6 GHz' número_nucleos='2' />	
+			<pci>
+				<tarjeta_grafica marca='Shapphire Radeon' modelo='HD 6770 Vapor-X' />
+				<tarjeta_red marca='TP-Link' modelo='TF-3239DL' />
+				<tarjeta_sonido marca='Trust' modelo='5.1 Surround Soundcard SC-5100 ' />		
+			</pci>
+			<memoria_ram marca='Kingston' modelo='ValueRAM' numero_ranuras='4' tipo='DDR3' tamaño_modulos='2G' />
+			<unidad_cd marca='LG' modelo='LG3452M' numero='1' velocidad='52x' />
+		</hardware>
+		
+		<software>
+			<BIOS>Phoenix Bios</BIOS>
+			<sistema_operativo>Ubuntu 11.04</sistema_operativo>
+		</software>
+	</ordenador>		
+</ordenadores>
+	
+	
+	
