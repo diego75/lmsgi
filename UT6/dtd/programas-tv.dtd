@@ -1,0 +1,22 @@
+
+<!ELEMENT ProgramaciónTV (Canal+)>
+<!ELEMENT Canal (Título, Día+)>
+<!ELEMENT Título (#PCDATA)>
+<!ELEMENT Día ((Fecha, Festivo) | (Fecha, Programación+))+>
+<!ELEMENT Festivo (#PCDATA)>
+<!ELEMENT Fecha (#PCDATA)>
+<!ELEMENT Programación (Hora, Título, Descripción?)>
+<!ELEMENT Hora (#PCDATA)>
+<!ELEMENT Título (#PCDATA)> 
+<!ELEMENT Descripción (#PCDATA)>
+
+<!ATTLIST ProgramaciónTV  Nombre CDATA #REQUIRED>
+
+<!ATTLIST Canal	Ch CDATA #REQUIRED>
+
+<!ATTLIST Programación	 VTR CDATA #IMPLIED>
+
+<!ATTLIST Título
+   Calificación CDATA #IMPLIED
+   Idioma CDATA #IMPLIED
+>
