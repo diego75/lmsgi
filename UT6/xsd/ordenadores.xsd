@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<xs:schema xmlns:xs='http://www.w3.org/2001/XMLSchema'
+targetNamespace='http://www.iescierva.net'
+xmlns='http://www.iescierva.net' elementFormDefault='qualified'>
+
+<xs:element name='ordenadores'>
+  <xs:complexType>
+    <xs:sequence>
+     <xs:element name='ordenador'>
+		<xs:complexType>
+			<xs:sequence>   			 	   					
+         	          <xs:element name='hardware'>
+         			 	<xs:complexType>
+         			 	  <xs:sequence>	
+         			 	          			 	  
+					        <xs:element name="procesador" minOccurs="1" maxOccurs="unbounded" />
+					        <xs:element name="monitor" minOccurs="1" maxOccurs="unbounded" />
+					        <xs:element name="teclado" minOccurs="1" maxOccurs="unbounded" />
+					 		<xs:element name="tarjeta_red" minOccurs="1" maxOccurs="unbounded" />
+					 		<xs:element name="tarjeta_grafica" minOccurs="1" maxOccurs="unbounded" />
+						
+						  </xs:sequence>
+						</xs:complexType>
+					</xs:element>			
+					<xs:element name='software' >
+         			 	 <xs:complexType>
+         			 	   <xs:sequence>	
+					        <xs:element name="bios" minOccurs="1" maxOccurs="1" />
+					        <xs:element name="sisoperativo" minOccurs="1" maxOccurs="1" />					        
+						   </xs:sequence>
+						 </xs:complexType>
+					</xs:element> 
+					
+									
+					  
+			</xs:sequence>
+						<xs:attribute name='tipo_de_ordenador' type='tipo_de_ordenador' />
+						 <xs:attribute name='marca' type='marca' />
+         		  		 <xs:attribute name='memoria' type='memoria' />
+         		 	     <xs:attribute name='velocidad' type='velocidad' />
+         		         <xs:attribute name='n_nucleos' type='n_nucleos' />	
+         		         </xs:complexType>
+         		         </xs:element>	
+         		         </xs:sequence>
+ 			</xs:complexType>
+ 	     </xs:element>
+   		         
+         		         
+ 
+
+<xs:simpleType name="procesador" >
+      <xs:restriction base='xs:string'>
+    <xs:pattern value='[a-zA-ZáéíóúÁÉÍÓÚüÜçÇ1-9 ]{1,20}'/>
+  </xs:restriction>
+</xs:simpleType>
+ 
+<xs:simpleType name="monitor" >
+     <xs:restriction base='xs:string'>
+    <xs:pattern value='[a-zA-ZáéíóúÁÉÍÓÚüÜçÇ1-9 ]{1,20}'/>
+  </xs:restriction>
+</xs:simpleType>
+
+
+<xs:simpleType name="teclado" >
+      <xs:restriction base='xs:string'>
+    <xs:pattern value='[a-zA-ZáéíóúÁÉÍÓÚüÜçÇ ]{1,20}'/>
+  </xs:restriction>
+</xs:simpleType>
+
+
+
+<xs:simpleType  name="tarjeta_red">
+      <xs:restriction base='xs:string'>
+    <xs:pattern value='[a-zA-ZáéíóúÁÉÍÓÚüÜçÇ1-9 ]{1,20}'/>
+  </xs:restriction>
+</xs:simpleType>
+
+
+ 
+<xs:simpleType name="tarjeta_grafica" >
+      <xs:restriction base='xs:string'>
+    <xs:pattern value='[a-zA-ZáéíóúÁÉÍÓÚüÜçÇ1-9 ]{1,20}'/>
+  </xs:restriction>
+</xs:simpleType>
+
+
+
+<xs:simpleType  name="bios" >
+      <xs:restriction base='xs:string'>
+    <xs:pattern value='[a-zA-ZáéíóúÁÉÍÓÚüÜçÇ ]{1,20}'/>
+  </xs:restriction>
+</xs:simpleType>
+
+
+
+<xs:simpleType  name="sisoperativo">
+      <xs:restriction base='xs:string'>
+    <xs:pattern value='[a-zA-ZáéíóúÁÉÍÓÚüÜçÇ ]{1,20}'/>
+  </xs:restriction>
+</xs:simpleType>
+
+          		         	   
+   		    
+   			  
+   			      
+ <xs:simpleType  name="tipo_de_ordenador">
+      <xs:restriction base='xs:string'>
+    <xs:pattern value='[a-zA-ZáéíóúÁÉÍÓÚüÜçÇ ]{1,20}'/>
+  </xs:restriction>
+</xs:simpleType>
+
+
+  
+
+					
+	
+<xs:simpleType name='portatil'>
+  <xs:restriction base='xs:string'>
+    <xs:pattern value='[a-zA-ZáéíóúÁÉÍÓÚüÜçÇ ]{1,20}'/>
+  </xs:restriction>
+</xs:simpleType>
+
+
+
+<xs:simpleType name='marca'>
+  <xs:restriction base='xs:string'>
+    <xs:pattern value='[a-zA-ZáéíóúÁÉÍÓÚüÜçÇ ]{1,20}'/>
+  </xs:restriction>
+</xs:simpleType>
+
+
+<xs:simpleType name='memoria'>
+  <xs:restriction base='xs:string'>
+    <xs:pattern value='[a-zA-ZáéíóúÁÉÍÓÚüÜçÇ1-9 ]{1,20}'/>
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name='velocidad'>
+  <xs:restriction base='xs:string'>
+    <xs:pattern value='[a-zA-ZáéíóúÁÉÍÓÚüÜçÇ1-9. ]{1,20}'/>
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name='n_nucleos'>
+  <xs:restriction base='xs:string'>
+    <xs:pattern value='[a-zA-ZáéíóúÁÉÍÓÚüÜçÇ1-9 ]{1,20}'/>
+  </xs:restriction>
+</xs:simpleType>
+
+</xs:schema>
