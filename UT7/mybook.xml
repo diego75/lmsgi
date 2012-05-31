@@ -5,4 +5,61 @@
 	xml:id="ejemplo"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://docbook.org/ns/docbook ../schema/xsd/5.0/docbook.xsd">
+
+	<info>
+	  <title>Primeros pasos con DocBook</title>
+	  <author >
+	    <personname>
+	      <firstname>Alberto</firstname>
+	      <surname>Molina Coballes</surname>
+	    </personname>
+	  </author>
+	</info>
+	<chapter xml:id="intro">
+	  <title>Introducción</title>
+	  <para>Para realizar presentaciones o documentos de texto, en lugar de utilizar aplicaciones ofimáticas, llevo muchos años utilizando LaTeX. LaTeX es muy potente y el resultado final es impresionante, es el formato estándar para publicar documentación científica y era el formato utilizado para crear de forma colaborativa documentación en proyectos de software libre, sin embargo hace años surgió el formato Docbook, que ha sustituido a LaTeX en determinados ámbitos, en particular en este último. No tengo todavía una opinión formada sobre las ventajas de uno sobre otro, creo que voy a empezar a utilizar DocBook para determinadas cosas e iré aprendiendo de la experiencia.</para>
+	  <para>En esta entrada se explica una manera de empezar a trabajar con DocBook (versión 5), utilizando Emacs como editor y Debian GNU/Linux (squeeze) como sistema operativo.</para>
+	  <section>
+	    <title>Instalación</title>
+	    <para>Instalamos los siguientes paquetes:</para>
+	    <screen>
+	      <prompt># </prompt><userinput>aptitude install xsltproc fop docbook-xsl-ns docbook5-xml</userinput>
+	    </screen>
+	    <para>Que incluye los esquemas de Docbook 5 en DTD, xsd, rng y rnc, las hojas de estilo y aplicaciones para realizar transformaciones a HTML o PDF.</para>
+	  </section>
+	  <section>
+	    <title>Configuración del entorno de trabajo – Emacs</title>
+	    <para>Ya que Docbook es un dialecto XML del que disponemos de los esquemas, lo más lógico es utilizar algún editor de textos que soporte la inclusión de esquemas, de manera que el documento se autovalide al vuelo. Yo voy a utilizar Emacs con nxml-mode (véase Emacs como editor XML de este mismo blog), los pasos a seguir son los siguientes:</para>
+	    <programlisting language="lisp">
+	    <![CDATA[
+	    (eval-after-load 'rng-loc '(add-to-list 'rng-schema-locating-files
+	    "~/.schemas/schemas.xml"))
+	    ]]>
+	    </programlisting>
+	    <para>Para que se busquen los esquemas de los diferentes dialectos en el directorio ~/.schemas, de acuerdo a lo especificado en el fichero schemas.xml, por lo que el siguiente paso es crear el directorio ~/.schemas y ubicar allí el fichero schemas.xml con el siguiente contenido:</para>
+	    <programlisting language="xml">
+	      <![CDATA[
+	      <locatingRules
+	        xmlns="http://thaiopensource.com/ns/locating-rules/1.0">
+	        <namespace ns="http://docbook.org/ns/docbook"
+	        uri="/usr/share/xml/docbook/schema/rng/5.0/docbookxi.rnc"/>
+	      </locatingRules>
+	      ]]>
+	    </programlisting>
+	  </section>
+	  <section>
+	    <title>Documento base</title>
+	    <para>Vamos a utilizar el siguiente documento como base para crear un documento extenso (book):</para>
+	    <programlisting language="xml">
+	      <![CDATA[
+	      <?xml version="1.0" encoding="utf-8"?>
+	      <book xmlns="http://docbook.org/ns/docbook"
+	            xmlns:xi="http://www.w3.org/2001/XInclude"
+	            version="5.0" xml:lang="es">
+	      </book>
+	      ]]>
+	    </programlisting>
+	    <para>Emacs reconocerá el espacio de nombres y automáticamente validará el formato y nos ayudará con el autocompletado, con ello podemos crear nuestro primer documento sin tener mucha idea de DocBook, aunque como es lógico es necesario tener a mano un buen manual, como por ejemplo DocBook 5: The Definitive Guide, publicado por O’Reilly pero disponible a su vez vía web.</para>
+  </section>
+</chapter>
 </book>

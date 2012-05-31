@@ -7,6 +7,7 @@
 	xsi:schemaLocation="http://docbook.org/ns/docbook ../schema/xsd/5.0/docbook.xsd">
 	
 	<title>Sample Article</title>
+	
 	<para>This is an sample article written in DocBook to shown off the functionality of xslthl.</para>
 	<para>This sample article contains two program listings. First a simple java example that should work without any changes. And after that a example of mixing HTML and PHP.</para>
 	<example xml:id="example.java">
